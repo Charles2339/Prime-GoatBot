@@ -41,7 +41,7 @@
     "value": "v1%3B694x360x3",
     "domain": ".facebook.com",
     "path": "/",
-    "expires": 1778089864,
+    "expires": 1778090892,
     "httpOnly": false,
     "secure": true,
     "sameSite": "Lax"
@@ -51,7 +51,7 @@
     "value": "100062530337681%3AzkqU158bTj%2C61559480740422%3AifNlHA6x2E%2C61585105709390%3AF1PctaSdry",
     "domain": ".facebook.com",
     "path": "/",
-    "expires": 1807465863.381529,
+    "expires": 1807466890.574946,
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
@@ -62,24 +62,6 @@
     "domain": ".facebook.com",
     "path": "/",
     "expires": 1773432733.753288,
-    "httpOnly": false,
-    "secure": true
-  },
-  {
-    "name": "m_pixel_ratio",
-    "value": "3",
-    "domain": ".facebook.com",
-    "path": "/",
-    "expires": -1,
-    "httpOnly": false,
-    "secure": true
-  },
-  {
-    "name": "wd",
-    "value": "360x780",
-    "domain": ".facebook.com",
-    "path": "/",
-    "expires": -1,
     "httpOnly": false,
     "secure": true
   },
@@ -103,29 +85,29 @@
   },
   {
     "name": "fr",
-    "value": "0gsK2jAzMpjS9NO1i.AWdJ88kzTG7eweN8W2h1D_a8bj1u5bQnBKwSS1geDdKLpBeUXzQ.BppVLQ..AAA.0.0.BprGWc.AWeql16XTPrDTmUy5c7FA9Oahyk",
+    "value": "0gsK2jAzMpjS9NO1i.AWcJgNGXCQDNvJXLEfq5ASf6yjq5722mvaMxOOrxCAqEuaDiFAw.BppVLQ..AAA.0.0.BprGmf.AWefYHPrU9XCmd5dp_zjneL6V_g",
     "domain": ".facebook.com",
     "path": "/",
-    "expires": 1780681863.381067,
+    "expires": 1780682890.569252,
     "httpOnly": true,
     "secure": true
   },
   {
     "name": "fbl_st",
-    "value": "100726206%3BT%3A29548431",
+    "value": "100721073%3BT%3A29548448",
     "domain": ".facebook.com",
     "path": "/",
-    "expires": 1804441864,
+    "expires": 1804442892,
     "httpOnly": false,
     "secure": true,
     "sameSite": "Strict"
   },
   {
     "name": "wl_cbv",
-    "value": "v2%3Bclient_version%3A3106%3Btimestamp%3A1772905884",
+    "value": "v2%3Bclient_version%3A3106%3Btimestamp%3A1772906911",
     "domain": ".facebook.com",
     "path": "/",
-    "expires": 1780681864,
+    "expires": 1780682891,
     "httpOnly": false,
     "secure": true
   }
