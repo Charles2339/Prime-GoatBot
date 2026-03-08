@@ -208,14 +208,13 @@ async function getTimeInfo() {
   const botUptime = process.uptime();
   const systemUptime = os.uptime();
 
- moment.tz.setDefault('Africa/Johannesburg');
-const saTime = moment().tz('Africa/Johannesburg');
+  moment.tz.setDefault('Africa/Johannesburg');
+  const saTime = moment().tz('Africa/Johannesburg');
 
-return {
-  date: saTime.format('MMMM Do YYYY, h:mm:ss A'),
-  saTime: saTime.format('h:mm:ss A'),
-  timezone: 'Africa/Johannesburg (SAST)',
-  ...
+   return {
+    date: saTime.format('MMMM Do YYYY, h:mm:ss A'),
+    saTime: saTime.format('h:mm:ss A'),
+    timezone: 'Africa/Johannesburg (SAST)',
 },
     botUptime: formatUptime(botUptime),
     systemUptime: formatUptime(systemUptime),
