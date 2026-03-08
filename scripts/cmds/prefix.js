@@ -1,4 +1,4 @@
-const fs = require("fs-extra");
+-cmd install prefix.js const fs = require("fs-extra");
 const { utils } = global;
 
 module.exports = {
@@ -110,7 +110,7 @@ module.exports = {
         + `║ 💬 Chatbox : ${threadPrefix}\n`
         + `║ ➤ ${threadPrefix}help to see all available cmds 🥵\n`
         + "╚═══════════════╝",
-        attachment: await utils.getStreamFromURL("https://files.catbox.moe/ykk54z.jpg")
+        attachment: await utils.getStreamFromURL("https://i.postimg.cc/yxbMpcwf/file-00000000afc871f5a8c35507e726c2ed.png")
       });
     }
   }

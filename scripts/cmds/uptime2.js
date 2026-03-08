@@ -135,7 +135,7 @@ async function pingHost(hostname) {
     const startTime = Date.now();
 
     // Use system ping command
-    const command = process.platform === 'win32' 
+    const command = process.platform === 'win32'
       ? `ping -n 1 ${hostname}`
       : `ping -c 1 ${hostname}`;
 
@@ -208,16 +208,15 @@ async function getTimeInfo() {
   const botUptime = process.uptime();
   const systemUptime = os.uptime();
 
-  // Set timezone to Bangladesh (Asia/Dhaka)
-  moment.tz.setDefault('Asia/Dhaka');
+ moment.tz.setDefault('Africa/Johannesburg');
+const saTime = moment().tz('Africa/Johannesburg');
 
-  // Get Bangladesh time
-  const bangladeshTime = moment().tz('Asia/Dhaka');
-
-  return {
-    date: bangladeshTime.format('MMMM Do YYYY, h:mm:ss A'),
-    bangladeshTime: bangladeshTime.format('h:mm:ss A'),
-    timezone: 'Asia/Dhaka (BST)',
+return {
+  date: saTime.format('MMMM Do YYYY, h:mm:ss A'),
+  saTime: saTime.format('h:mm:ss A'),
+  timezone: 'Africa/Johannesburg (SAST)',
+  ...
+},
     botUptime: formatUptime(botUptime),
     systemUptime: formatUptime(systemUptime),
     timestamp: now.getTime()
@@ -302,8 +301,8 @@ async function getCpuInfo() {
     console.error("CPU info error:", error);
     const cpus = os.cpus();
     const cpuModel = cpus && cpus.length > 0 ? cpus[0].model : 'Unknown';
-    const cpuSpeed = cpus && cpus[0] && cpus[0].speed ? 
-      (cpus[0].speed > 1000 ? `${(cpus[0].speed/1000).toFixed(2)} GHz` : `${cpus[0].speed} MHz`) : 
+    const cpuSpeed = cpus && cpus[0] && cpus[0].speed ?
+      (cpus[0].speed > 1000 ? `${(cpus[0].speed/1000).toFixed(2)} GHz` : `${cpus[0].speed} MHz`) :
       'N/A';
 
     return {
@@ -451,9 +450,9 @@ async function getBotData(threadsData, usersData) {
       try {
         if (fs.existsSync(cmdPath)) {
           const items = fs.readdirSync(cmdPath);
-          const jsFiles = items.filter(f => 
-            f.endsWith('.js') && 
-            !f.startsWith('_') && 
+          const jsFiles = items.filter(f =>
+            f.endsWith('.js') &&
+            !f.startsWith('_') &&
             !f.includes('example') &&
             f !== 'index.js'
           );
@@ -504,9 +503,9 @@ function formatUptime(seconds) {
 function getPingQuality(ping) {
   // Adjusted for server-to-internet ping
   if (ping < 50) return { emoji: '⚡', status: 'Excellent' };
-  if (ping < 100) return { emoji: '🟢', status: 'Very Good' };
-  if (ping < 200) return { emoji: '🟡', status: 'Good' };
-  if (ping < 350) return { emoji: '🟠', status: 'Average' };
+  if (ping < 100) return { emoji: '�', status: 'Very Good' };
+  if (ping < 200) return { emoji: '�', status: 'Good' };
+  if (ping < 350) return { emoji: '�', status: 'Average' };
   return { emoji: '🔴', status: 'Poor' };
 }
 

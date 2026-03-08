@@ -1,44 +1,28 @@
-const axios = require('axios');
-
-const baseApiUrl = async () => {
-  const base = await axios.get("https://raw.githubusercontent.com/mahmudx7/exe/main/baseApiUrl.json");
-  return base.data.mahmud;
-};
+const moment = require('moment-timezone');
 
 module.exports = {
   config: {
     name: "time",
-    version: "1.7",
-    author: "MahMUD",
+    version: "1.8",
+    author: "Charles MK",
     countDown: 2,
     role: 0,
     category: "utility",
-    guide: "{pn} [country] | {pn} list\n\nExamples:\n{pn} bangladesh\n{pn} london\n{pn} list"
+    guide: "{pn}"
   },
 
-  onStart: async function ({ message, args }) {
-    const country = args[0]?.toLowerCase() || "bangladesh";
+  onStart: async function ({ message }) {
+    try {
+      const saTime = moment().tz("Africa/Johannesburg");
 
-   try {
-    const baseUrl = await baseApiUrl();
+      const formatted = 
+        `🇿🇦 South African Time (SAST)\n` +
+        `━━━━━━━━━━━━━━━━━━\n` +
+        `📅 Date: ${saTime.format("dddd, MMMM Do YYYY")}\n` +
+        `🕐 Time: ${saTime.format("hh:mm:ss A")}\n` +
+        `🌍 Timezone: Africa/Johannesburg (UTC+2)`;
 
-    if (country === "list") {
-    const listRes = await axios.get(`${baseUrl}/api/time/list`, {
-    headers: { "author": module.exports.config.author }
-        });
-
-     return listRes.data.message
-   ? message.reply(listRes.data.message)
-   : message.reply("⚠️ Unable to fetch country list.");
-    }
-
-      const timeRes = await axios.get(`${baseUrl}/api/time/${country}`, {
-      headers: { "author": module.exports.config.author }
-    });
-
-      return timeRes.data.message
-    ? message.reply(timeRes.data.message)
-    : message.reply("⚠️ Unable to fetch time.");
+      return message.reply(formatted);
     } catch (error) {
       return message.reply("⚠️ An error occurred. Please try again later.");
     }
