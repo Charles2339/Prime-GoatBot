@@ -13,7 +13,7 @@
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
   "nickNameBot": "MKBOV2",
-  "prefix": "+",
+  "prefix": "-",
   "adminOnly": {
     "enable": false,
     "ignoreCommand": []
@@ -45,7 +45,7 @@
   },
   "database": {
     "type": "mongodb",
-    "uriMongodb": "mongodb+srv://Akatsuki:akatsuki2339@cluster0.lljnvwy.mongodb.net/?appName=Cluster0",
+    "uriMongodb": "mongodb+srv://Akatsuki:akatsuki2339@cluster0.lljnvwy.mongodb.net/GoatBot_DB?retryWrites=true&w=majority&appName=Cluster0",
     "autoSyncWhenStart": true,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "Using MongoDB to prevent data loss on Render. autoSyncWhenStart is set to true to ensure data persistence."
